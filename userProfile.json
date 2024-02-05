@@ -1,0 +1,114 @@
+{
+    "workbench.sideBar.location": "right",
+    "zenMode.centerLayout": false,
+    "zenMode.hideLineNumbers": false,
+    "zenMode.fullScreen": false,
+    "editor.minimap.enabled": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript"],
+    "workbench.settings.applyToAllProfiles": [
+        
+    ],
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // switch b/w buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+        //panes
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+        //move between panes
+        { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+        { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+        { "before": ["<C-k>"], "after": ["<C-w>", "k"] },
+        { "before": ["<C-l>"], "after": ["<C-w>", "l"] },
+        //nice to have
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "w","q"], "commands": [":wq"] },
+        { "before": ["leader", "p"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "f"], "commands": ["editor.action.formatDocument"] },
+        {
+        "before": ["<leader>", "c", "a"],
+        "commands": ["editor.action.quickFix"]
+        },
+
+        { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+        { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+        {
+        "before": ["<leader>", "m"],
+        "commands": ["whichkey.show"]
+        },
+        {
+        "before": ["J"],
+        "after": ["5", "j"]
+        },
+        {
+        "before": ["K"],
+        "after": ["5", "k"]
+        },
+        {
+        "before": ["<Leader>", "j"],
+        "after": ["J"]
+        },
+        {
+        "before": ["<Leader>", "t", "t"],
+        "commands": [":tabnew"]
+        },
+        {
+        "before": ["<Leader>", "t", "o"],
+        "commands": [":tabo"]
+        },
+        {
+        "before": ["<Leader>", "/"],
+        "commands": [":noh"]
+        },
+        {
+        "before": ["<Leader>", "w"],
+        "commands": ["workbench.action.files.save"]
+        },
+        {
+        "before": ["<Leader>", "t"],
+        "commands": ["workbench.action.gotoSymbol"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Stay in visual mode while indenting
+        { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+        { "before": [">"], "commands": ["editor.action.indentLines"] },
+        // toggle comment selection
+        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+        "before": ["<Leader>", "m"],
+        "commands": ["whichkey.show"]
+        },
+        {
+        "before": ["J"],
+        "after": ["5", "j"]
+        },
+        {
+        "before": ["K"],
+        "after": ["5", "k"]
+        }
+    ],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "window.zoomLevel": 2,
+    "editor.stickyScroll.enabled": true,
+    "workbench.tree.enableStickyScroll": true,
+    "files.associations": {
+        "*.pl": "prolog"
+    },
+    "[prolog]": {
+        
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Noctis Azureus",
+    "git.confirmSync": false
+}
