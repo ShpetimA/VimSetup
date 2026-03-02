@@ -1,0 +1,120 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  // VSCODE PORT - settings migrated from VS Code
+  "git_panel": {
+    "tree_view": true
+  },
+  "bottom_dock_layout": "contained",
+  "scroll_beyond_last_line": "off",
+  "buffer_line_height": { "custom": 1.3 },
+  "remove_trailing_whitespace_on_save": true,
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "code_actions_on_format": {
+    "source.fixAll.eslint": true
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "extension",
+      "favorite_models": [
+        "anthropic/claude-opus-4-5"
+      ],
+      "default_config_options": {},
+      "favorite_config_option_values": {}
+    },
+    "claude": {
+      "default_model": "opus",
+      "favorite_models": [],
+      "default_config_options": {},
+      "favorite_config_option_values": {}
+    }
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "icon_theme": "Catppuccin Frappé",
+  "terminal": {
+    "env": {},
+    "font_family": "Jetbrains Mono Nerd Font"
+  },
+  "project_panel": {
+    "auto_fold_dirs": false
+  },
+  "base_keymap": "VSCode",
+  "status_bar": {
+    "experimental.show": true
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "scrollbar": {
+    "axes": {
+      "horizontal": true,
+      "vertical": true
+    }
+  },
+  "buffer_font_fallbacks": [
+    "Jetbrains Mono"
+  ],
+  "file_types": {
+    "prolog": [
+      "*.pl"
+    ],
+    "html": [
+      "*.tmpl"
+    ],
+    "odin": [
+      "*.odin"
+    ]
+  },
+  "linked_edits": true,
+  "buffer_font_family": "TX-02",
+  "relative_line_numbers": "enabled",
+  "buffer_font_weight": 500,
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "cursor_blink": false,
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false
+  },
+  "format_on_save": "on",
+  "formatter": [],
+  "indent_guides": {
+    "enabled": false
+  },
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+  },
+  "theme": "Vesper",
+  "vim_mode": true
+}

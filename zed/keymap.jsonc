@@ -1,0 +1,127 @@
+// VSCODE PORT - keybindings migrated from VS Code vim config
+[
+  // ============================================
+  // GLOBAL BINDINGS
+  // ============================================
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-j": "workspace::ToggleBottomDock",
+      "cmd-shift-s": "git_panel::ToggleFocus"
+    }
+  },
+
+  // ============================================
+  // VIM NORMAL MODE
+  // ============================================
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // Buffer navigation (shift-h/l)
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+
+      // Pane splits (leader v/s)
+      "space v": "pane::SplitRight",
+      "space s": "pane::SplitDown",
+
+      // Pane navigation (ctrl-hjkl)
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+
+      // Close/save (leader q, wq, w)
+      "space q": "pane::CloseActiveItem",
+      "space w q": ["workspace::SendKeystrokes", "cmd-s cmd-w"],
+      "space w": "workspace::Save",
+
+      // File finder (leader p)
+      "space p": "file_finder::Toggle",
+
+      // Format (leader f)
+      "space f": "editor::Format",
+
+      // Code actions (leader ca)
+      "space c a": "editor::ToggleCodeActions",
+
+      // Fast movement (J/K = 5j/5k)
+      "shift-j": ["workspace::SendKeystrokes", "5 j"],
+      "shift-k": ["workspace::SendKeystrokes", "5 k"],
+
+      // Join lines moved to leader j (since J is now 5j)
+      "space j": "vim::JoinLines",
+
+      // Clear search highlight (leader /) - uses :noh command
+      "space /": ["workspace::SendKeystrokes", ": n o h enter"],
+
+      // Go to symbol (leader t)
+      "space t": "outline::Toggle",
+
+      // Rename symbol (leader re)
+      "space r e": "editor::Rename",
+
+      // New tab (leader tt)
+      "space t t": "workspace::NewFile",
+
+      // Close other tabs (leader to)
+      "space t o": "pane::CloseInactiveItems"
+    }
+  },
+
+  // ============================================
+  // VIM VISUAL MODE
+  // ============================================
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      // Stay in visual mode while indenting (handled by default in Zed)
+      // Comment toggle (leader c)
+      "space c": "editor::ToggleComments",
+
+      // Fast movement (J/K = 5j/5k)
+      "shift-j": ["workspace::SendKeystrokes", "5 j"],
+      "shift-k": ["workspace::SendKeystrokes", "5 k"]
+    }
+  },
+
+  // ============================================
+  // VIM INSERT MODE
+  // ============================================
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      // Uncomment to use jk to escape to normal mode
+      // "j k": "vim::NormalBefore"
+    }
+  },
+
+  // ============================================
+  // PROJECT PANEL (vim-style navigation)
+  // ============================================
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "n": "project_panel::NewFile",
+      "shift-n": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "y": "project_panel::Copy",
+      "p": "project_panel::Paste"
+    }
+  },
+
+  // ============================================
+  // DOCK NAVIGATION (ctrl-w hjkl works in docks too)
+  // ============================================
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  }
+]
